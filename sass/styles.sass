@@ -1,0 +1,188 @@
+@use 'variables'
+@use 'mixins'
+
+*
+    font-family: 'Sora'
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    background-color: variables.$bg-color
+    color: variables.$text-color
+    
+
+    a
+        color: variables.$text-color
+        text-decoration: none
+        transition: 0.4s
+
+    ul
+        list-style: none
+        
+.header
+    display: flex
+    justify-content: space-between
+    @include mixins.container
+    @include mixins.mobile
+    padding: 1.1rem
+
+    &-brand
+        font-size: 2.5rem
+        color: variables.$primary-color
+        font-weight: 400
+
+        span
+            color: variables.$secondary-color
+
+    &-navbar
+
+        ul
+            height: 100%
+            @include mixins.flex-center
+
+            @include mixins.mobile
+                display: none
+
+            li
+                margin: 0 2rem
+                text-transform: uppercase
+                font-weight: 600
+                font-size: 0.8rem
+
+                .active
+                    color: variables.$secondary-color
+
+                a
+                    &:hover
+                        color: variables.$secondary-color
+
+        &-btn
+            
+
+            ul
+                li
+                    a
+                        background-color: variables.$secondary-color
+                        color: variables.$bg-color
+                        padding: .5rem 1.5rem
+                        border-radius: 20px
+
+                    a:hover
+                        color: variables.$bg-color
+                        background-color: variables.$hover-btn
+
+.main
+    @include mixins.container
+    @include mixins.flex-center
+    height: 100% 
+    width: 100%
+    justify-content: space-between
+    padding: 0
+
+    &-text
+        color: variables.$text-color
+
+        @include mixins.mobile
+       
+
+        
+        h1
+            font-size: 3rem
+            color: variables.$text-color
+
+        span
+            color: variables.$secondary-color
+
+    &-search
+        display: flex
+        justify-content: space-around
+        background-color: rgba(5, 5, 5, 0.2)
+        border-radius: 5px
+        margin-top: 2rem
+        height: 3rem
+        align-items: center
+        
+
+        &-secao
+            @include mixins.container
+            padding: 0
+            margin: 5px 0
+            font-size: .7rem
+            
+            &-localizacao
+                @include mixins.flex-center
+                color: variables.$secondary-color
+                justify-content: space-evenly
+
+                
+
+        p
+            font-size: .8rem
+            align-self: center
+
+            @include mixins.mobile
+                font-size: .8rem
+
+        img
+            width: 20px
+            height: 20px
+            
+
+        &-secao2
+            @include mixins.container
+            padding: 0 
+            margin: 20px 0
+            font-size: .7rem
+            
+            &-tipo
+                @include mixins.flex-center
+                color: variables.$secondary-color
+                justify-content: start
+
+                h2
+                    padding-left: 8px
+                
+
+            p
+                font-size: .8rem
+                align-self: center
+        
+        &-btn 
+            @include mixins.flex-center
+            border: none
+            background-color: variables.$secondary-color
+            color: variables.$bg-color
+            padding: .5rem .8rem
+            border-radius: 20px
+            cursor: pointer
+
+
+        button:hover
+            color: variables.$bg-color
+            background-color: variables.$hover-btn
+            cursor: pointer
+
+
+    &-img
+        img
+            width: 265px
+
+footer
+    @include mixins.flex-center
+   
+    span
+        color: variables.$secondary-color
+
+        
+        
+                        
+                        
+                        
+
+            
+                
+
+
+        
+    
